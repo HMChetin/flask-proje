@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{_('Sütun Seç')}}</title>
+</head>
+<body>
+    <h2>{{_('X Ekseni ve Y Ekseni Sütunlarını Seç')}}</h2>
+    <form action="/plot" method="post">
+        <input type="hidden" name="filename" value="{{ filename }}">
+
+        <label for="x_column">{{_('X Ekseni Sütunu:')}}</label>
+        <select name="x_column" required>
+            {% for col in columns %}
+            <option value="{{ col }}">{{ col }}</option>
+            {% endfor %}
+        </select>
+
+        <h4>{{_('Y Ekseni Sütunları:')}}</h4>
+        {% for col in columns %}
+            <input type="checkbox" name="y_columns" value="{{ col }}"> {{ col }}<br>
+        {% endfor %}
+
+        <h4>{{_('Grafik Türü Seç:')}}</h4>
+        <select name="chart_type">
+            <option value="line">{{_('Çizgi')}}</option>
+            <option value="bar">{{_('Sütun')}}</option>
+            <option value="scatter">{{_('Nokta')}}</option>
+        </select>
+
+        <br><br>
+        <input type="submit" value="{{_('Grafiği Göster')}}">
+    </form>
+</body>
+</html>

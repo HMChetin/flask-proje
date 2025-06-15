@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="{{ session.get('lang', 'tr') }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{{ _('Çukurova Data') }}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/cerulean/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+        <a class="navbar-brand" href="{{ url_for('upload_file') }}">{{ _('📊 Çukurova Data') }}</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('upload_file') }}">{{ _('📁 Veri Yükle') }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('history') }}">{{ _('📈 Geçmiş Grafikler') }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('dashboard') }}">{{ _('📋 Dashboard') }}</a>
+                </li>
+            </ul>
+
+            <div class="d-flex align-items-center">
+                <!-- 🌐 Dil seçici -->
+                <div class="me-3">
+                    <span class="text-white me-1">{{ _('Dil') }}:</span>
+                    {% set current_lang = session.get('lang', 'tr') %}
+                    <a href="{{ url_for('set_language', lang='tr') }}" class="text-white me-1 {% if current_lang == 'tr' %}fw-bold text-decoration-underline{% endif %}">🇹🇷</a>
+                    <a href="{{ url_for('set_language', lang='en') }}" class="text-white {% if current_lang == 'en' %}fw-bold text-decoration-underline{% endif %}">🇬🇧</a>
+                </div>
+
+                {% if session.get('username') %}
+                    <span class="text-white me-3">👤 {{ session['username'] }}</span>
+                    <a class="btn btn-sm btn-outline-light" href="{{ url_for('logout') }}">{{ _('Çıkış Yap') }}</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="{{ _('Kapat') }}"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script>
+  const alerts = document.querySelectorAll('.alert');
+  alerts.forEach(alert => {
+    setTimeout(() => {
+      const fade = new bootstrap.Alert(alert);
+      fade.close();
+    }, 4000);
+  });
+</script>

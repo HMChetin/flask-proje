@@ -1,0 +1,291 @@
+# Translations template for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-15 11:54+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app.py:89
+msgid "Bu kullanıcı adı zaten kayıtlı!"
+msgstr ""
+
+#: app.py:93
+msgid "Kayıt başarılı. Giriş yapabilirsiniz."
+msgstr ""
+
+#: app.py:112
+msgid "Kullanıcı adı veya şifre hatalı!"
+msgstr ""
+
+#: app.py:147 app.py:174
+msgid "Desteklenmeyen dosya biçimi."
+msgstr ""
+
+#: app.py:154
+msgid "Lütfen geçerli bir CSV dosyası yükleyin."
+msgstr ""
+
+#: app.py:166
+msgid "Geçerli bir dosya yüklemeniz gerekiyor."
+msgstr ""
+
+#: app.py:188
+msgid "Tüm alanları doldurmanız gerekiyor."
+msgstr ""
+
+#: app.py:190
+msgid "Seçilen sütunlar veride bulunamadı."
+msgstr ""
+
+#: app.py:201 app.py:212
+msgid "Geçersiz grafik türü."
+msgstr ""
+
+#: app.py:236
+msgid "Grafik çizim hatası:"
+msgstr ""
+
+#: app.py:262
+msgid "Grafik dosyası bulunamadı."
+msgstr ""
+
+#: templates/base.html:5
+msgid "Çukurova Data"
+msgstr ""
+
+#: templates/base.html:12
+msgid "📊 Çukurova Data"
+msgstr ""
+
+#: templates/base.html:21
+msgid "📁 Veri Yükle"
+msgstr ""
+
+#: templates/base.html:24
+msgid "📈 Geçmiş Grafikler"
+msgstr ""
+
+#: templates/base.html:27
+msgid "📋 Dashboard"
+msgstr ""
+
+#: templates/base.html:34
+msgid "Dil"
+msgstr ""
+
+#: templates/base.html:42
+msgid "Çıkış Yap"
+msgstr ""
+
+#: templates/base.html:54
+msgid "Kapat"
+msgstr ""
+
+#: templates/columns.html:4
+msgid "Sütun Seç"
+msgstr ""
+
+#: templates/columns.html:7
+msgid "X Ekseni ve Y Ekseni Sütunlarını Seç"
+msgstr ""
+
+#: templates/columns.html:11
+msgid "X Ekseni Sütunu:"
+msgstr ""
+
+#: templates/columns.html:18
+msgid "Y Ekseni Sütunları:"
+msgstr ""
+
+#: templates/columns.html:23
+msgid "Grafik Türü Seç:"
+msgstr ""
+
+#: templates/columns.html:25 templates/select.html:25
+msgid "Çizgi"
+msgstr ""
+
+#: templates/columns.html:26 templates/select.html:26
+msgid "Sütun"
+msgstr ""
+
+#: templates/columns.html:27 templates/select.html:27
+msgid "Nokta"
+msgstr ""
+
+#: templates/columns.html:31
+msgid "Grafiği Göster"
+msgstr ""
+
+#: templates/dashboard.html:6
+msgid "Hoşgeldin"
+msgstr ""
+
+#: templates/dashboard.html:7
+msgid "Oluşturduğun grafik:"
+msgstr ""
+
+#: templates/dashboard.html:10
+msgid "Son yüklediğin dosya:"
+msgstr ""
+
+#: templates/dashboard.html:12
+msgid "Henüz bir dosya yüklenmedi."
+msgstr ""
+
+#: templates/dashboard.html:16
+msgid "📈 Yeni Bir Grafik Oluştur"
+msgstr ""
+
+#: templates/dashboard.html:17
+msgid "🕘 Grafik Geçmişini Görüntüle"
+msgstr ""
+
+#: templates/history.html:3
+msgid "Grafik Geçmişi"
+msgstr ""
+
+#: templates/history.html:9
+msgid "X Ekseni"
+msgstr ""
+
+#: templates/history.html:10
+msgid "Y Ekseni"
+msgstr ""
+
+#: templates/history.html:11
+msgid "Grafik Türü"
+msgstr ""
+
+#: templates/history.html:12
+msgid "Tarih"
+msgstr ""
+
+#: templates/history.html:27
+msgid "Henüz grafik oluşturmadınız."
+msgstr ""
+
+#: templates/history.html:30
+msgid "Yeni Grafik Oluştur"
+msgstr ""
+
+#: templates/index.html:4
+msgid "Dosya Yükleme"
+msgstr ""
+
+#: templates/index.html:11
+msgid "Excel veya CSV Dosyası Yükle"
+msgstr ""
+
+#: templates/index.html:16
+msgid "Yükle ve Sütunları Göster"
+msgstr ""
+
+#: templates/login.html:3
+msgid "Giriş Yap"
+msgstr ""
+
+#: templates/login.html:6 templates/register.html:6
+msgid "Kullanıcı Adı"
+msgstr ""
+
+#: templates/login.html:9 templates/register.html:9
+msgid "Şifre"
+msgstr ""
+
+#: templates/login.html:11
+msgid "Giriş"
+msgstr ""
+
+#: templates/login.html:12
+msgid "Hesabınız yok mu?"
+msgstr ""
+
+#: templates/login.html:12
+msgid "Kayıt olun"
+msgstr ""
+
+#: templates/plot.html:5 templates/select.html:52
+msgid "Oluşturulan Grafik"
+msgstr ""
+
+#: templates/plot.html:13
+msgid "← Sütun Seçme Ekranına Dön"
+msgstr ""
+
+#: templates/register.html:3 templates/register.html:11
+msgid "Kayıt Ol"
+msgstr ""
+
+#: templates/register.html:12
+msgid "Zaten hesabınız var mı?"
+msgstr ""
+
+#: templates/register.html:12
+msgid "Giriş yap"
+msgstr ""
+
+#: templates/select.html:3
+msgid "Grafik Oluştur"
+msgstr ""
+
+#: templates/select.html:7
+msgid "X Ekseni:"
+msgstr ""
+
+#: templates/select.html:15
+msgid "Y Ekseni:"
+msgstr ""
+
+#: templates/select.html:23
+msgid "Grafik Türü:"
+msgstr ""
+
+#: templates/select.html:33
+msgid "Grafik Rengi:"
+msgstr ""
+
+#: templates/select.html:37
+msgid "Grafik Başlığı:"
+msgstr ""
+
+#: templates/select.html:38
+msgid "İsteğe bağlı"
+msgstr ""
+
+#: templates/select.html:41
+msgid "Grid Göster:"
+msgstr ""
+
+#: templates/select.html:46
+msgid "Grafiği Oluştur"
+msgstr ""
+
+#: templates/select.html:53
+msgid "Grafik"
+msgstr ""
+
+#: templates/select.html:54
+msgid "Grafiği İndir"
+msgstr ""
+
+#: templates/upload.html:3
+msgid "CSV veya XLSX Dosyası Yükle"
+msgstr ""
+
+#: templates/upload.html:8
+msgid "Yükle"
+msgstr ""
+

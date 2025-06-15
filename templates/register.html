@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{_('Kayıt Ol')}}</h2>
+<form method="POST">
+    <div class="mb-3">
+        <input type="text" name="username" placeholder="{{_('Kullanıcı Adı')}}" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <input type="password" name="password" placeholder="{{_('Şifre')}}" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-success">{{_('Kayıt Ol')}}</button>
+    <p class="mt-3">{{_('Zaten hesabınız var mı?')}} <a href="{{ url_for('login') }}">{{_('Giriş yap')}}</a></p>
+</form>
+{% endblock %}

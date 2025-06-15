@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card shadow-lg p-4">
+        <h2 class="mb-3">{{_('Hoşgeldin')}}, {{ username }} 👋</h2>
+        <p class="lead">{{_('Oluşturduğun grafik:')}} <strong>{{ chart_count }}</strong> chart{{ chart_count != 1 and 's' or '' }}.</p>
+
+        {% if uploaded_file %}
+        <p>{{_('Son yüklediğin dosya:')}} <strong>{{ uploaded_file.split('/')[-1] }}</strong></p>
+        {% else %}
+        <p>{{_('Henüz bir dosya yüklenmedi.')}}</p>
+        {% endif %}
+
+        <div class="mt-4 d-flex gap-3">
+            <a href="{{ url_for('upload_file') }}" class="btn btn-primary">{{_('📈 Yeni Bir Grafik Oluştur')}}</a>
+            <a href="{{ url_for('history') }}" class="btn btn-secondary">{{_('🕘 Grafik Geçmişini Görüntüle')}}</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{_('Grafik Geçmişi')}}</h2>
+
+{% if records %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>{{_('X Ekseni')}}</th>
+            <th>{{_('Y Ekseni')}}</th>
+            <th>{{_('Grafik Türü')}}</th>
+            <th>{{_('Tarih')}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for x, y, chart, time in records %}
+        <tr>
+            <td>{{ x }}</td>
+            <td>{{ y }}</td>
+            <td>{{ chart }}</td>
+            <td>{{ time }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>{{_('Henüz grafik oluşturmadınız.')}}</p>
+{% endif %}
+
+<a href="{{ url_for('upload_file') }}" class="btn btn-secondary mt-3">{{_('Yeni Grafik Oluştur')}}</a>
+{% endblock %}

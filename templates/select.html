@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{_('Grafik Oluştur')}}</h2>
+<form method="POST">
+    <div class="row mb-3">
+        <div class="col">
+            <label>{{_('X Ekseni:')}}</label>
+            <select class="form-select" name="x_column" required>
+                {% for col in columns %}
+                <option value="{{ col }}">{{ col }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col">
+            <label>{{_('Y Ekseni:')}}</label>
+            <select class="form-select" name="y_column" required>
+                {% for col in columns %}
+                <option value="{{ col }}">{{ col }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col">
+            <label>{{_('Grafik Türü:')}}</label>
+            <select class="form-select" name="chart_type" required>
+                <option value="line">{{_('Çizgi')}}</option>
+                <option value="bar">{{_('Sütun')}}</option>
+                <option value="scatter">{{_('Nokta')}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row mb-3">
+    <div class="col">
+        <label>{{_('Grafik Rengi:')}}</label>
+        <input type="color" class="form-control form-control-color" name="color" value="#007bff">
+    </div>
+    <div class="col">
+        <label>{{_('Grafik Başlığı:')}}</label>
+        <input type="text" class="form-control" name="title" placeholder="{{_('İsteğe bağlı')}}">
+    </div>
+    <div class="col">
+        <label>{{_('Grid Göster:')}}</label><br>
+        <input type="checkbox" name="show_grid" class="form-check-input">
+    </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">{{_('Grafiği Oluştur')}}</button>
+</form>
+
+{% if plot_generated %}
+<hr>
+<div class="text-center mt-4">
+    <h4>{{_('Oluşturulan Grafik')}}</h4>
+    <img src="{{ url_for('static', filename='plot.png') }}" class="img-fluid rounded shadow" alt="{{_('Grafik')}}">
+    <a href="{{ url_for('download') }}" class="btn btn-primary mt-3">{{_('Grafiği İndir')}}</a>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">{{_('Oluşturulan Grafik')}}</h2>
+
+    <div class="text-center">
+        <img src="{{ url_for('static', filename='plot.png') }}" class="img-fluid rounded shadow" alt="Generated Chart">
+    </div>
+
+    <div class="mt-4 text-center">
+        <a href="{{ url_for('select') }}" class="btn btn-outline-primary">
+            {{_('← Sütun Seçme Ekranına Dön')}}
+        </a>
+    </div>
+</div>
+{% endblock %}
